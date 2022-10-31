@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <button type="button" id="pendu" onclick="gotoIndex()">
+            <img src="img/icons8-retour-90.png" alt="Icône Pendu">
+        </button>
+        
+        <div class="container center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <!-- Bouton pour aller au Mot Croisé -->
+                    <label for="motcroise"> Mot Croisé </label>            
+                    <button type="button" id="motcroise" onclick="gotoMotCroise()">
+                        <img src="img/mots-croises.png" alt="Icône Mot Croisé" height="250" width="250">
+                    </button>
+                </div>
+                <div class="col">
+                    <!-- Bouton pour aller au jeu du Pendu -->
+                    <label for="pendu"> Jeu du Pendu </label>
+                    <button type="button" id="pendu" onclick="gotoPendu()">
+                        <img src="img/jeu-du-pendu.png" alt="Icône Jeu du Pendu" height="250" width="250">
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Les div des graphiques, si tu veux changer le style faut aller voir la doc + le changer dans le JS: https://www.chartjs.org/docs/latest/ -->
+        <div>
+            <canvas id="myChartPendu"></canvas>
+        </div>
+        <div>
+            <canvas id="myChartMotCroise"></canvas>
+        </div>
+
+        <!-- Bouton pour supprimer les valeurs obtenus -->
+        <div class="container center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <button type="button" id="pendu" class="btn btn-danger" onclick="deleteScore()">
+                        ! SUPPRIMER SCORE !
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/anatomie.js"></script>
+    </body>
+</html>
